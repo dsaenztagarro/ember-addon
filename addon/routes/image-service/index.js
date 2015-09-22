@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   beforeModel() {
-    console.log('application#route');
+    debugger
+    console.log('image-service#route');
     this.transitionTo('image-service.photos');
   }
 });
