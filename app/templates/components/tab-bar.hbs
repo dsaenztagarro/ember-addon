@@ -1,0 +1,5 @@
+<ul>
+  {{#each tabs as |tab| }}
+    <li><span {{action "select" tab}}>{{tab.text}}</span></li>
+  {{/each}}
+</ul>

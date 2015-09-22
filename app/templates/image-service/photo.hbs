@@ -1,0 +1,14 @@
+{{tab-bar select="selectTab" tabs=tabs}}
+
+<ul>
+  {{#each photos as |photo|}}
+    {{photo-item select="selectImage" photo=photo}}
+  {{/each}}
+</ul>
+
+<ul>
+  <li>{{#link-to 'photo.properties'}}properties{{/link-to}}</li>
+  <li>{{#link-to 'photo.crops'}}crops{{/link-to}}</li>
+</ul>
+
+{{outlet}}
