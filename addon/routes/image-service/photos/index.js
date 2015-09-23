@@ -3,12 +3,12 @@ import TabBarMixin from 'webapp/mixins/tab-bar';
 
 export default Ember.Route.extend(TabBarMixin, {
   photosService: Ember.inject.service('photos'),
+  photosService2: Ember.inject.service('image-service.photos'),
   model() {
-    return {
-      tabs: this.get('menuService').getTabs('default'),
-      photos: this.get('photosService').fetchAll(), /* the list of photos */
-      photo: null, /* current photo selected on list */
-    };
+		var tabs = this.get('menuService').getTabs('default');
+		var photos = this.get('photosService').fetchAll(); /* the list of photos */
+		var photo = null; /* current photo selected on list */
+    return { tabs: tabs, photos: photos, photo: photo };
   },
 
   afterModel(model) {
