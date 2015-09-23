@@ -1,3 +1,3 @@
-import ImageCliServicePhotos from 'ember-image-service/services/image-service/photos';
+import ImageClientServicePhotos from 'ember-image-service/services/image-service/photos';
 
-export default ImageCliServicePhotos.extend();
+export default ImageClientServicePhotos.extend();
