@@ -4,13 +4,13 @@ export default Ember.Service.extend({
   getTabs(routeName) {
     var config = {
       'default': [{
-          routeName: 'photos',
+          routeName: 'image-service.photos',
           text: 'photos'
         }, {
-          routeName: 'search',
+          routeName: 'image-service.search',
           text: 'search'
         }, {
-          routeName: 'upload',
+          routeName: 'image-service.upload',
           text: 'upload'
         }
       ]

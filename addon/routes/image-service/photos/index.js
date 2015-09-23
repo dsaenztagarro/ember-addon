@@ -24,7 +24,7 @@ export default Ember.Route.extend(TabBarMixin, {
 	_transitionToPhoto(photo) {
     if (photo) {
       this.get('cacheService').add('photo', photo);
-      this.transitionTo('photo', photo.id);
+      this.transitionTo('image-service.photo', photo.id);
     }
 	}
 });
