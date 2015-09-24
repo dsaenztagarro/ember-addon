@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import TabBarMixin from 'webapp/mixins/tab-bar';
+import TabBarMixin from 'ember-components/mixins/tab-bar';
 
 //TODO: Should be an ArrayController
 export default Ember.Controller.extend(TabBarMixin, {

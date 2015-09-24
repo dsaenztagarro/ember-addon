@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
   actions: {
     selectImage(photo) {
       this.get('cacheService').add('photo', photo);
-      this.transitionToRoute('photo.properties', photo.id);
+      this.transitionToRoute('image-service.photo.properties', photo.id);
     }
   }
 });

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  photosService: Ember.inject.service('photos'),
+  photosService: Ember.inject.service('image-service.photos'),
 
   model: function() {
     return {

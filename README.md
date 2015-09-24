@@ -23,3 +23,23 @@ This README outlines the details of collaborating on this Ember addon.
 * `ember build`
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+## Development workflow
+
+Client project
+--------------
+
+```
+npm link
+```
+
+
+Master project
+--------------
+
+```
+rm node_modules/<client-project-name>
+npm link <client-project-name>
+ember server
+```
+npm link ember-image-service && ember
