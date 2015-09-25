@@ -1,9 +1,3 @@
-import Ember from 'ember';
+import CoreRouteBase from 'ember-core/routes/base';
 
-export default Ember.Route.extend({
-  actions: {
-    selectTab(tab) {
-      this.transitionTo(tab.routeName);
-    },
-  }
-});
+export default CoreRouteBase.extend();
