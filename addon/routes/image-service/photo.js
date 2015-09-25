@@ -5,7 +5,7 @@ export default Ember.Route.extend(TabBarMixin, {
   photosService: Ember.inject.service('image-service.photos'),
 
   model: function() {
-    var tabs = this.get('menuService').getTabs('default');
+    var tabs = this.get('menuService').getTabs(this);
     var photos = this.get('photosService').fetchAll();
     var photo = this.get('cacheService').get('photo');
     return {

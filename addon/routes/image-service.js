@@ -3,7 +3,7 @@ import TabBarMixin from 'ember-components/mixins/tab-bar';
 
 export default Ember.Route.extend(TabBarMixin, {
   model() {
-		var tabs = this.get('menuService').getTabs('default');
+		var tabs = this.get('menuService').getTabs(this);
     var context = { tabs: tabs };
     return context;
   },
