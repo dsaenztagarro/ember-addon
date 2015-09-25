@@ -1,4 +1,5 @@
 import Ember from 'ember';
+// import PhotoTabMixin from 'ember-image-service/mixins/tabs/photo';
 
 export default Ember.ObjectController.extend({
   photoController: Ember.inject.controller('photo'),
