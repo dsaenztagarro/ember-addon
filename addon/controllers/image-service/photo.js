@@ -1,8 +1,6 @@
 import Ember from 'ember';
-import TabBarMixin from 'ember-components/mixins/tab-bar';
 
-//TODO: Should be an ArrayController
-export default Ember.Controller.extend(TabBarMixin, {
+export default Ember.Controller.extend({
   photos: Ember.computed.reads('model.photos'),
   photo: Ember.computed.reads('model.photo'),
   actions: {
