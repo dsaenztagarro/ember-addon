@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import TabBarMixin from 'ember-components/mixins/tab-bar';
+import BaseRoute from 'ember-image-service/routes/base';
 
-export default Ember.Route.extend(TabBarMixin, {
+export default BaseRoute.extend({
   photosService: Ember.inject.service('image-service.photos'),
 
   model: function() {

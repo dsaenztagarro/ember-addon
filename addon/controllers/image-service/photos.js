@@ -1,5 +1,5 @@
 import Ember from 'ember';
-// import TabBarMixin from 'webapp/mixins/tab-bar';
+// import TabbableMixin from 'webapp/mixins/tab-bar';
 
 export default Ember.Controller.extend({
   /*

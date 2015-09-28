@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import BaseRoute from 'ember-image-service/routes/base';
 
-export default Ember.Route.extend({
+export default BaseRoute.extend({
   actions: {
     selectTab(tab) {
       this.transitionTo(tab.routeName);
