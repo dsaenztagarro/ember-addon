@@ -1,6 +1,6 @@
 export function initialize(container, application) {
-  application.inject('route', 'cacheService', 'service:cache');
-  application.inject('controller', 'cacheService', 'service:cache');
+  application.inject('route', 'localCacheService', 'service:cache');
+  application.inject('controller', 'localCacheService', 'service:cache');
 }
 
 export default {

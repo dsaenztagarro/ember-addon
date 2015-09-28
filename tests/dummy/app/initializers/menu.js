@@ -1,5 +1,5 @@
 export function initialize(container, application) {
-  application.inject('route', 'menuService', 'service:image-service.menu');
+  application.inject('route', 'localMenuService', 'service:image-service.menu');
 }
 
 export default {
