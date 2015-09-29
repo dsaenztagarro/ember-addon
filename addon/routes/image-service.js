@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import BaseRoute from 'ember-image-service/routes/base';
 import TabbableMixin from 'ember-components/mixins/tab-bar';
 
-export default Ember.Route.extend(TabbableMixin, {
+export default BaseRoute.extend(TabbableMixin, {
   model() {
 		var tabs = this.get('localMenuService').getTabs(this);
     var context = { tabs: tabs };
@@ -9,7 +9,6 @@ export default Ember.Route.extend(TabbableMixin, {
   },
 
   afterModel() {
-		this.transitionTo('image-service.photos');
-  },
-
+		this.client().transitionTo('photos');
+  }
 });
