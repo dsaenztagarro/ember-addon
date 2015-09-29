@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 var config = {
-  'image-service': [
+  'container.image-service': [
     {
       name: 'photos',
       routeName: 'image-service.photos'
@@ -13,7 +13,7 @@ var config = {
       routeName: 'image-service.upload'
     }
   ],
-  'image-service.photo': [
+  'container.image-service.photo': [
     {
       name: 'properties',
       routeName: 'image-service.photo.properties'
