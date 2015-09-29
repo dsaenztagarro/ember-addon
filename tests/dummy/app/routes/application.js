@@ -1,4 +1,4 @@
-import BaseRoute from 'ember-image-service/routes/base';
+import BaseRoute from './routes/base';
 
 export default BaseRoute.extend({
   actions: {

@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import BaseRoute from 'ember-image-service/routes/base';
 
-export default Ember.Route.extend({
+export default BaseRoute.extend({
   beforeModel() {
-    this.transitionTo('image-service.photos');
+    this.client().transitionTo('photos');
   }
 });

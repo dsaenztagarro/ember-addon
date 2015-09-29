@@ -21,7 +21,7 @@ export default Ember.Route.extend({
 	_transitionToPhoto(photo) {
     if (photo) {
       this.get('localCacheService').add('photo', photo);
-      this.transitionTo('image-service.photo', photo.id);
+      this.client().transitionTo('photo', photo.id);
     }
 	}
 });

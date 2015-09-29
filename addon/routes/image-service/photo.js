@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import BaseRoute from 'ember-image-service/routes/base';
+import BaseRoute from './routes/base';
 
 export default BaseRoute.extend({
   photosService: Ember.inject.service('image-service.photos'),
@@ -18,9 +18,9 @@ export default BaseRoute.extend({
   afterModel: function(model) {
     var photo = model.photo;
     if (photo) {
-      this.transitionTo('image-service.photo.properties', model.photo.id);
+      this.client().transitionTo('photo.properties', model.photo.id);
     } else {
-      this.transitionTo('image-service.photos');
+      this.client().transitionTo('photos');
     }
   },
 

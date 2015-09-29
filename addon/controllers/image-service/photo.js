@@ -1,7 +1,7 @@
 import Ember from 'ember';
-import ApplicationController from 'ember-image-service/controllers/application';
+import BaseController from 'ember-image-service/controllers/base';
 
-export default ApplicationController.extend({
+export default BaseController.extend({
   photos: Ember.computed.reads('model.photos'),
   photo: Ember.computed.reads('model.photo'),
 

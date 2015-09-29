@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import BaseRoute from './routes/base';
 
-export default Ember.Route.extend({
+export default BaseRoute.extend({
   photosService: Ember.inject.service('image-service.photos'),
   model() {
 		var tabs = this.get('localMenuService').getTabs(this);
@@ -21,7 +22,7 @@ export default Ember.Route.extend({
 	_transitionToPhoto(photo) {
     if (photo) {
       this.get('localCacheService').add('photo', photo);
-      this.transitionTo('image-service.photo', photo.id);
+      this.client().transitionTo('photo', photo.id);
     }
 	}
 });
