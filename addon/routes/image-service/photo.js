@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import BaseRoute from './routes/base';
+import BaseRoute from 'ember-image-service/routes/base';
 
 export default BaseRoute.extend({
   photosService: Ember.inject.service('image-service.photos'),
