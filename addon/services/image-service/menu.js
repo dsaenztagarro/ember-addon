@@ -1,25 +1,25 @@
 import Ember from 'ember';
 
 var config = {
-  'container.image-service': [
+  'content.image-service': [
     {
       name: 'photos',
-      routeName: 'container.image-service.photos'
+      routeName: 'content.image-service.photos'
     }, {
       name: 'search',
-      routeName: 'container.image-service.search'
+      routeName: 'content.image-service.search'
     }, {
       name: 'upload',
-      routeName: 'container.image-service.upload'
+      routeName: 'content.image-service.upload'
     }
   ],
-  'container.image-service.photo': [
+  'content.image-service.photo': [
     {
       name: 'properties',
-      routeName: 'container.image-service.photo.properties'
+      routeName: 'content.image-service.photo.properties'
     }, {
       name: 'crops',
-      routeName: 'container.image-service.photo.crops'
+      routeName: 'content.image-service.photo.crops'
     }
   ]
 };

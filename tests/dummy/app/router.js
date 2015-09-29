@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('container', function() {
+  this.route('content', function() {
     imageServiceRouter(this);
   });
 });

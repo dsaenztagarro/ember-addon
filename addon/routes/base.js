@@ -10,7 +10,7 @@ import RouterRoutingWrapper from 'ember-core/wrappers/routing/router';
 export default Ember.Route.extend({
   init() {
     var routingWrapper = RouterRoutingWrapper.create({
-      namespace: 'container.image-service', router: this
+      namespace: 'content.image-service', router: this
     });
     this.set('routingWrapper', routingWrapper);
   },
