@@ -4,22 +4,22 @@ var config = {
   'container.image-service': [
     {
       name: 'photos',
-      routeName: 'image-service.photos'
+      routeName: 'container.image-service.photos'
     }, {
       name: 'search',
-      routeName: 'image-service.search'
+      routeName: 'container.image-service.search'
     }, {
       name: 'upload',
-      routeName: 'image-service.upload'
+      routeName: 'container.image-service.upload'
     }
   ],
   'container.image-service.photo': [
     {
       name: 'properties',
-      routeName: 'image-service.photo.properties'
+      routeName: 'container.image-service.photo.properties'
     }, {
       name: 'crops',
-      routeName: 'image-service.photo.crops'
+      routeName: 'container.image-service.photo.crops'
     }
   ]
 };
@@ -32,5 +32,4 @@ export default Ember.Service.extend({
   getTabs(route) {
     return this.get('config')[route.routeName];
   }
-
 });
