@@ -1,6 +1,7 @@
 import Ember from 'ember';
+// import RoutingWrapper from 'ember-core/wrappers/routing/controller-wrapper';
 
-var Scope = Ember.Object.extend({
+var RoutingWrapper = Ember.Object.extend({
   init() {
     if (this.get('controller') === undefined) {
       throw 'MandatoryAttributeError: controller';
@@ -9,34 +10,58 @@ var Scope = Ember.Object.extend({
       throw 'MandatoryAttributeError: namespace';
     }
   },
-  transitionToRoute(relativeRouteName) {
-    var absoluteRouteName = this.get('namespace') + '.' + relativeRouteName;
+  /**
+   * Transition the application into another route in the scope of the client
+   * application.
+   *
+   * @method transitionToRoute
+   * @public
+   */
+  transitionToRoute() {
+    var ctrl = this.get('controller');
+    var args = Array.prototype.slice.call(arguments);
+    var routeName = this.get('namespace') + '.' + args.shift();
+    args.splice(0, 0, routeName);
     debugger
-    return this.get('controller').transitionToRoute(absoluteRouteName);
+    // return ctrl.transitionToRoute.apply(ctrl, [args[0]]);
+    return this.get('controller').transitionToRoute(args[0]);
   }
 });
+
 
 // TODO: Scopeable
 export default Ember.Controller.extend({
   photos: Ember.computed.reads('model.photos'),
   photo: Ember.computed.reads('model.photo'),
   init() {
-    this.initScope();
-    if (typeof this.post_init === 'function') {
-      this.post_init();
-    }
+    var routingWrapper = RoutingWrapper.create({
+      namespace: 'image-service',
+      controller: this
+    });
+    this.set('routingWrapper', routingWrapper);
   },
-  initScope() {
-    var scope = Scope.create({ namespace: 'image-service', controller: this });
-    this.set('localScope', scope);
+  /**
+   *
+   *
+   * @method methodName
+   * @param {String} foo Argument 1
+   * @param {Object} config A config object
+   * @param {String} config.name The name on the config object
+   * @param {Function} config.callback A callback function on the config object
+   * @param {Boolean} [extra=false] Do extra, optional work
+   * @return {Boolean} Returns true on success
+   */
+  client() {
+    return this.get('routingWrapper');
   },
-  scope() {
-    return this.get('localScope');
-  },
+
   actions: {
     selectPhoto(photo) {
       this.get('localCacheService').add('photo', photo);
-      this.scope().transitionToRoute('photo.properties', { photo_id: photo.id });
+      // this.client().transitionToRoute('photo.properties', { photo_id: photo.id });
+      debugger
+      // this.transitionToRoute('image-service.photo.properties', { photo_id: photo.id });
+      this.transitionToRoute('image-service.photo.properties', { photo_id: photo.id });
     }
   }
 });

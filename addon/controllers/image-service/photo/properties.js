@@ -31,7 +31,6 @@ export default Ember.ObjectController.extend({
     this.set('localScope', scope);
   },
   scope() {
-    debugger
     return this.get('localScope');
   },
   actions: {
