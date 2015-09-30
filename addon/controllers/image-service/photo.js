@@ -7,7 +7,7 @@ export default BaseController.extend({
 
   actions: {
     selectPhoto(photo) {
-      this.get('localCacheService').add('photo', photo);
+      this.get('cacheService').add('photo', photo);
       this.client().transitionToRoute('photo.properties', photo.id);
     }
   }

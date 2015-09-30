@@ -8,6 +8,8 @@ import ControllerRoutingWrapper from 'ember-core/wrappers/routing/controller';
  * @class BaseController
  */
 export default Ember.Controller.extend({
+  cacheService: Ember.inject.service('cache'),
+
   init() {
     var routingWrapper = ControllerRoutingWrapper.create({
       namespace: 'content.image-service', controller: this

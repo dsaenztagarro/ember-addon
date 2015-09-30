@@ -21,7 +21,7 @@ export default BaseRoute.extend({
 
 	_transitionToPhoto(photo) {
     if (photo) {
-      this.get('localCacheService').add('photo', photo);
+      this.get('cacheService').add('photo', photo);
       this.client().transitionTo('photo', photo.id);
     }
 	}

@@ -7,7 +7,7 @@ export default BaseRoute.extend({
   model: function() {
     var tabs = this.get('menuService').getTabs(this);
     var photos = this.get('photosService').fetchAll();
-    var photo = this.get('localCacheService').get('photo');
+    var photo = this.get('cacheService').get('photo');
     return {
       tabs: tabs,
       photos: photos, /* the list of photos */
