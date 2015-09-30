@@ -3,7 +3,7 @@ import TabbableMixin from 'ember-components/mixins/tab-bar';
 
 export default BaseRoute.extend(TabbableMixin, {
   model() {
-		var tabs = this.get('localMenuService').getTabs(this);
+		var tabs = this.get('menuService').getTabs(this);
     var context = { tabs: tabs };
     return context;
   },

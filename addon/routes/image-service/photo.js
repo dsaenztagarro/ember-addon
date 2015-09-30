@@ -5,7 +5,7 @@ export default BaseRoute.extend({
   photosService: Ember.inject.service('image-service.photos'),
 
   model: function() {
-    var tabs = this.get('localMenuService').getTabs(this);
+    var tabs = this.get('menuService').getTabs(this);
     var photos = this.get('photosService').fetchAll();
     var photo = this.get('localCacheService').get('photo');
     return {

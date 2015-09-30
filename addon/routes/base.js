@@ -8,6 +8,9 @@ import RouterRoutingWrapper from 'ember-core/wrappers/routing/router';
  * @class BaseRoute
  */
 export default Ember.Route.extend({
+  menuService: Ember.inject.service('image-service.menu'),
+  localCacheService: Ember.inject.service('image-service.cache'),
+
   init() {
     var routingWrapper = RouterRoutingWrapper.create({
       namespace: 'content.image-service', router: this
