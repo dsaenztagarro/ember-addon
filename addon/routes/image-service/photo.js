@@ -22,11 +22,5 @@ export default BaseRoute.extend({
     } else {
       this.client().transitionTo('photos');
     }
-  },
-
-  setupController(controller, model) {
-    this._super(controller, model);
-    controller.set('photos', model.photos);
-    controller.set('photo', model.photo);
   }
 });
