@@ -4,4 +4,4 @@ rm -f node_modules/ember-core
 npm link ember-components
 npm link ember-services
 npm link ember-core
-ember server
+ember server --port 4210

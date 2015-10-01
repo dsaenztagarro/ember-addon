@@ -1,3 +1,3 @@
-import ImageServiceRoutePhotosIndex from 'ember-image-service/routes/image-service/photos';
+import ImageServiceRoutePhotos from 'ember-image-service/routes/image-service/photos';
 
-export default ImageServiceRoutePhotosIndex.extend();
+export default ImageServiceRoutePhotos.extend();

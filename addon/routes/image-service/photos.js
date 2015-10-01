@@ -14,11 +14,6 @@ export default BaseRoute.extend({
 		this._transitionToPhoto(photos[0]);
   },
 
-  setupController(controller, model) {
-    this._super(controller, model);
-    controller.set('photos', model.photos);
-  },
-
 	_transitionToPhoto(photo) {
     if (photo) {
       this.get('cacheService').add('photo', photo);
